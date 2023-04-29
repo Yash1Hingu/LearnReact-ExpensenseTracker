@@ -1,8 +1,19 @@
 import './ExpensenForm.css'
+import React , {useState} from 'react'
 
 const ExpensenForm = () => {
+    const [EnterTitle,setEnterTitle] = useState('');
+    const [EnterAmount,setEnterAmount] = useState('');
+    const [EnterDate,setEnterDate] = useState('');
+
     const titleChangeHandler = (event) =>{
-        console.log(event.target.value);
+        setEnterTitle(event.target.value);
+    }
+    const amountChangeHandler = (event) =>{
+        setEnterAmount(event.target.value);
+    }
+    const dateChangeHandler = (event) =>{
+        setEnterDate(event.target.value);
     }
     return (
         <form action="">
@@ -13,11 +24,11 @@ const ExpensenForm = () => {
                 </div>
                 <div className="new-expense__controls">
                     <label>Amount</label>
-                    <input type="number" min="0.01"/>
+                    <input type="number" min="0.01" onChange={amountChangeHandler}/>
                 </div>
                 <div className="new-expense__controls">
                     <label>Date</label>
-                    <input type="date" min="2019-01-01" max="2024-01-01"/>
+                    <input type="date" min="2019-01-01" max="2024-01-01" onChange={dateChangeHandler}/>
                 </div>
             </div>
             <div className="new-expense__actions">
