@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.expensenseBox{
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    margin: 20px;
+    border: 5px solid palevioletred;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.expensense_item__name{
+    margin-left: 20px;
+}
+.expensense_item__price{
+    cursor: pointer;
+    margin-left: auto;
+    background-color: palevioletred;
+    padding: 10px;
+    border: 5px solid darkblue;
+    border-radius: 20px;
+}
+.expensense_item__price:hover{
+    background-color: rgba(216, 112, 147, 0.574);
+}
