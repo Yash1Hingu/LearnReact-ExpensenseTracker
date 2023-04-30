@@ -20,9 +20,14 @@ const App = () => {
       date: new Date('11 Jul 2022')
     }
   ]
+
+  const NewExpensenHandler = (newExpensenData) =>{
+    console.log("App.js")
+    console.log(newExpensenData)
+  }
   return (
     <div>
-        <NewExpensen />
+        <NewExpensen onNewExpense={NewExpensenHandler}/>
       <Card className="App">
         <ExpensensItem
           title={expensens[0].title}
