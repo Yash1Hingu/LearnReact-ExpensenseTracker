@@ -43,6 +43,7 @@ const ExpensenForm = (props) => {
         event.preventDefault();
 
         const expenseData = {
+            id: Math.random().toString(),
             title: EnterTitle,
             amount: EnterAmount,
             date: new Date(EnterDate)
