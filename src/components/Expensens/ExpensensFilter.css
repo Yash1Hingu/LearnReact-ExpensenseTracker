@@ -1,0 +1,14 @@
+.expensens__filter{
+    text-align: right;
+    margin: 30px;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+}
+.expensens__filter select {
+    font-size: 1.5rem;
+    padding: 5px;
+    outline: none;
+    border: 5px solid rgb(1, 1, 140);
+    border-radius: 5px;
+    background-color: hsl(340, 57%, 64%);
+}
