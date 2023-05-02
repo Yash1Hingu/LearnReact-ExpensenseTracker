@@ -26,7 +26,6 @@ const App = () => {
   const NewExpensenHandler = (newExpensenData) => {
     setExpensens(pervExpense => [newExpensenData , ...pervExpense])
   }
-  console.log(expensens)
   return (
     <>
       <NewExpensen onNewExpense={NewExpensenHandler} />
