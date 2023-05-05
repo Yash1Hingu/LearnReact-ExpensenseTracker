@@ -5,12 +5,21 @@ const ExpensenForm = (props) => {
     const [EnterTitle,setEnterTitle] = useState('');
     const [EnterAmount,setEnterAmount] = useState('');
     const [EnterDate,setEnterDate] = useState('');
+    const [show,setShow] = useState(props.show);
     // const [EnterInput, setEnterInput] = useState({
     //     EnterTitle: '',
     //     EnterAmount: '',
     //     EnterDate: ''
     // })
 
+    const showHandler = (event) => {
+        setShow(event.target.name)
+    }
+    if(show === 'true') {
+        return (
+            <button onClick={showHandler} name='false'>Add New Expensens</button>
+        )
+    }
     const titleChangeHandler = (event) => {
         setEnterTitle(event.target.value);
         // setEnterInput((userInput) => {
@@ -71,6 +80,7 @@ const ExpensenForm = (props) => {
                 </div>
             </div>
             <div className="new-expense__actions">
+                <button onClick={showHandler} name='true'>Cancel</button>
                 <button type="submit">Add Expensens</button>
             </div>
         </form>
